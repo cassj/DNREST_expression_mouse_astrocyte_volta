@@ -1,0 +1,53 @@
+require 'rubygems'
+require "right_aws"
+
+aws_access_key = ENV['AMAZON_ACCESS_KEY']
+aws_secret_access_key = ENV['AMAZON_SECRET_ACCESS_KEY']
+
+# If you're not using defaults, set up env vars like:
+# ENV['S3_SERVER']   = "s3.amazonaws.com"
+# ENV['S3_PORT']     = 443
+# ENV['S3_PROTOCOL'] = "https"
+# ENV['S3_SERVICE']  = "/"
+
+#not sure what other locatins it supports just now. 
+#can't see anything in the docs
+case ENV['S3_LOCATION']
+when /EU/i
+  location = :eu
+else
+  location = :us
+end
+
+project_name = 'DNREST_expression_mouse_astrocyte_volta'
+filename = 'Astro-REST-DN-raw.csv'
+
+max_size = 5368709120 #5GB
+
+desc "upload files to s3"
+task :to_s3 => [] do
+  
+  s3 = RightAws::S3.new(aws_access_key, 
+                      aws_secret_access_key)
+  
+
+  #force delete existing bucket with this project name
+  bs = s3.buckets.select{|b| b.to_s.match(/^#{project_name}$/)}
+  bs.each{|b| b.delete(true)}
+  
+  #create a new bucket 
+  b = s3.bucket(project_name, true, 'private', :location => location)
+  b_name = b.to_s  
+
+  #upload the file to the bucket. 
+  file = File.open(filename)
+  b.put(filename, file) 
+  file.close
+  
+  #add the files in the bucket to the MANIFEST
+  keys = b.keys
+  file = File.open('S3',"w")
+  
+  keys.each{|k| file.puts("#{b_name}/#{k}")}
+  
+end
