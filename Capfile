@@ -112,8 +112,9 @@ before "qc_expression_data", "EC2:start"
 
 desc "run pre-processing on expression data"
 task :pp_expression_data, :roles => group_name do
-  run 'curl "http://github.com/cassj/manu_rest_project/raw/master/qw.R" -O /mnt/scripts/qw.R'
-  run 'curl "http://github.com/cassj/manu_rest_project/raw/master/limma_xpn.R" -O /mnt/scripts/limma_xpn.R'
+  run "mkdir -p #{working_dir/scripts}"
+  run "cd #{working_dir/scripts} && curl http://github.com/cassj/DNREST_expression_mouse_astrocyte_volta/raw/master/scripts/limma_xpn.R > limma_xpn.R"
+  run "cd #{working_dir/scripts} && curl http://github.com/cassj/DNREST_expression_mouse_astrocyte_volta/raw/master/scripts/qw.R > qw.R"
   run 'Rscript /mnt/scripts/limma_xpn.R'
 end
 before "pp_expression_data", "EC2:start"
