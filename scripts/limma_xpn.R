@@ -67,8 +67,8 @@ ebFit<-eBayes(fit)
 write.fit(ebFit, file=outfile , adjust="BH")
 data<-read.table(outfile, sep="\t", header=T)
 
-#data<- topTable(ebFit, number=nrow(data))
-#write.csv(data,outfile)
+data<- topTable(ebFit, number=nrow(data))
+write.csv(data,outfile)
 
 
 

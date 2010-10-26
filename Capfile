@@ -115,7 +115,6 @@ desc "run pre-processing on expression data"
 task :pp_expression_data, :roles => group_name do
   run "mkdir -p #{working_dir}/scripts"
   run "cd #{working_dir}/scripts && curl http://github.com/cassj/DNREST_expression_mouse_astrocyte_volta/raw/master/scripts/limma_xpn.R > limma_xpn.R"
-  run "cd #{working_dir}/scripts && curl http://github.com/cassj/DNREST_expression_mouse_astrocyte_volta/raw/master/scripts/qw.R > qw.R"
   run "chmod +x #{working_dir}/scripts/limma_xpn.R"
   s3_file = File.new("data/S3", "r").readline.chomp
   s3_file = Pathname.new(s3_file).basename
@@ -132,24 +131,28 @@ end
 
 desc "Make an IRanges object from expression data"
 task :irange_expression_data, :roles => group_name do
-  run 'wget "http://github.com/cassj/my_bioinfo_scripts/raw/master/liftOver.R" -O /mnt/scripts/liftOver.R'
-  run 'wget "http://github.com/cassj/manu_rest_project/raw/master/xpn_csv_to_iranges.R" -O /mnt/scripts/xpn_csv_to_iranges.R'
-  sudo 'mkdir -p /mnt/lib'
   user = variables[:ssh_options][:user]
-  sudo "chown #{user} /mnt/lib"
-  run 'wget "http://hgdownload.cse.ucsc.edu/goldenPath/mm8/liftOver/mm8ToMm9.over.chain.gz" -O /mnt/lib/mm8ToMm9.over.chain.gz'
-  run 'gunzip -c /mnt/lib/mm8ToMm9.over.chain.gz > /mnt/lib/mm8ToMm9.over.chain'
-  run  "wget http://mng.iop.kcl.ac.uk/data_dump/Mouse-6_V1.csv -O /mnt/lib/Mouse-6_V1.csv" 
-  
+
+  run "mkdir -p #{working_dir}/lib"
+  run "curl 'http://hgdownload.cse.ucsc.edu/goldenPath/mm8/liftOver/mm8ToMm9.over.chain.gz' > #{working_dir}/lib/mm8ToMm9.over.chain.gz"
+  run 'cd #{working_dir}/lib && gunzip -c mm8ToMm9.over.chain.gz > mm8ToMm9.over.chain'
+  run "cd #{working_dir}/scripts & curl http://github.com/cassj/DNREST_expression_mouse_astrocyte_volta/raw/master/scripts/liftOver.R > xpn_csv_to_iranges.R"
+  run "curl 'http://github.com/cassj/manu_rest_project/raw/master/xpn_csv_to_iranges.R' >>  xpn_csv_to_iranges.R"
+
+  #Illumina annotation data
+  run "curl http://www.switchtoi.com/pdf/Annotation%20Files/Mouse/Mouse-6_V1.csv.zip > #{working_dir}/lib/Mouse-6_V1.csv"
+
   #reMOAT data, to get probe sequence and genome location (mm8, although they seem to have mm9
   #now so perhaps we should update?
-  run "wget -O /mnt/lib/IlluminaMouseV1.txt  http://www.compbio.group.cam.ac.uk/Resources/Annotation/IlluminaMouseV1.txt"
+  run "curl http://www.compbio.group.cam.ac.uk/Resources/Annotation/IlluminaMouseV1.txt > #{working_dir}/lib/IlluminaMouseV1.txt"
   
   sudo 'wget -O /usr/bin/liftOver http://hgdownload.cse.ucsc.edu/admin/exe/linux.i386/liftOver'
   sudo 'chmod +x /usr/bin/liftOver'
-  run 'Rscript /mnt/scripts/xpn_csv_to_iranges.R'
+#  run 'Rscript /mnt/scripts/xpn_csv_to_iranges.R'
 end
 before "irange_expression_data","EC2:start"  
+
+
   
 
 desc "map irange position to nearest Ensembl gene"
