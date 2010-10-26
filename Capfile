@@ -136,8 +136,7 @@ task :irange_expression_data, :roles => group_name do
   run "mkdir -p #{working_dir}/lib"
   run "curl 'http://hgdownload.cse.ucsc.edu/goldenPath/mm8/liftOver/mm8ToMm9.over.chain.gz' > #{working_dir}/lib/mm8ToMm9.over.chain.gz"
   run 'cd #{working_dir}/lib && gunzip -c mm8ToMm9.over.chain.gz > mm8ToMm9.over.chain'
-  run "cd #{working_dir}/scripts & curl http://github.com/cassj/DNREST_expression_mouse_astrocyte_volta/raw/master/scripts/liftOver.R > xpn_csv_to_iranges.R"
-  run "curl 'http://github.com/cassj/manu_rest_project/raw/master/xpn_csv_to_iranges.R' >>  xpn_csv_to_iranges.R"
+  run "curl 'http://github.com/cassj/manu_rest_project/raw/master/xpn_csv_to_iranges.R' >  xpn_csv_to_iranges.R"
 
   #Illumina annotation data
   run "curl http://www.switchtoi.com/pdf/Annotation%20Files/Mouse/Mouse-6_V1.csv.zip > #{working_dir}/lib/Mouse-6_V1.csv"
@@ -148,7 +147,7 @@ task :irange_expression_data, :roles => group_name do
   
   sudo 'wget -O /usr/bin/liftOver http://hgdownload.cse.ucsc.edu/admin/exe/linux.i386/liftOver'
   sudo 'chmod +x /usr/bin/liftOver'
-#  run 'Rscript /mnt/scripts/xpn_csv_to_iranges.R'
+  #run "cd #{mount_point} && Rscript #{working_dir}/scripts/xpn_csv_to_iranges.R limma_results.csv #{working_dir}/lib/Mouse-6_V1.csv #{working_dir}/lib/IlluminaMouseV1.txt"
 end
 before "irange_expression_data","EC2:start"  
 
