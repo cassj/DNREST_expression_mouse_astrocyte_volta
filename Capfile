@@ -1,6 +1,7 @@
 #### Congfiguration ####
 
 require 'catpaws/ec2'
+require 'pathname'
 
 set :aws_access_key,  ENV['AMAZON_ACCESS_KEY']
 set :aws_secret_access_key , ENV['AMAZON_SECRET_ACCESS_KEY']
@@ -112,10 +113,13 @@ before "qc_expression_data", "EC2:start"
 
 desc "run pre-processing on expression data"
 task :pp_expression_data, :roles => group_name do
-  run "mkdir -p #{working_dir/scripts}"
-  run "cd #{working_dir/scripts} && curl http://github.com/cassj/DNREST_expression_mouse_astrocyte_volta/raw/master/scripts/limma_xpn.R > limma_xpn.R"
-  run "cd #{working_dir/scripts} && curl http://github.com/cassj/DNREST_expression_mouse_astrocyte_volta/raw/master/scripts/qw.R > qw.R"
-  run 'Rscript /mnt/scripts/limma_xpn.R'
+  run "mkdir -p #{working_dir}/scripts"
+  run "cd #{working_dir}/scripts && curl http://github.com/cassj/DNREST_expression_mouse_astrocyte_volta/raw/master/scripts/limma_xpn.R > limma_xpn.R"
+  run "cd #{working_dir}/scripts && curl http://github.com/cassj/DNREST_expression_mouse_astrocyte_volta/raw/master/scripts/qw.R > qw.R"
+  run "chmod +x #{working_dir}/scripts/limma_xpn.R"
+  s3_file = File.new("data/S3", "r").readline.chomp
+  s3_file = Pathname.new(s3_file).basename
+  run "cd #{mount_point} && Rscript #{working_dir}/scripts/limma_xpn.R raw/#{s3_file} limma_results.csv"
 end
 before "pp_expression_data", "EC2:start"
 

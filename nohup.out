@@ -1,0 +1,1418 @@
+cat: SNAPID: No such file or directory
+  * executing `pp_expression_data'
+    triggering before callbacks for `pp_expression_data'
+  * executing `EC2:start'
+I, [2010-10-26T11:18:36.564378 #11551]  INFO -- : New RightAws::Ec2 using shared connections mode
+I, [2010-10-26T11:18:36.566733 #11551]  INFO -- : Opening new HTTPS connection to eu-west-1.ec2.amazonaws.com:443
+W, [2010-10-26T11:18:36.746597 #11551]  WARN -- : ##### RightAws::Ec2 returned an error: 400 Bad Request
+<?xml version="1.0" encoding="UTF-8"?>
+<Response><Errors><Error><Code>InvalidGroup.Duplicate</Code><Message>The security group 'CaTPAWS_DNREST_expression_mouse_astrocyte_volta' already exists</Message></Error></Errors><RequestID>2ede21ed-01dc-4bdf-beca-e595718a1ed6</RequestID></Response> #####
+W, [2010-10-26T11:18:36.746735 #11551]  WARN -- : ##### RightAws::Ec2 request: https://eu-west-1.ec2.amazonaws.com:443/?AWSAccessKeyId=16F5AHH5HWR243WSNMR2&Action=CreateSecurityGroup&GroupDescription=A%20group%20created%20by%20CaTPAWS%20%28http%3A%2F%2Fgithub.com%2Fcassj%2Fcatpaws%29&GroupName=CaTPAWS_DNREST_expression_mouse_astrocyte_volta&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2010-10-26T10%3A18%3A36.000Z&Version=2009-11-30&Signature=jifiCOwIQhLppJAh6P6EyrbBM7fBZyyqTpzfPYtpml8%3D ####
+    triggering after callbacks for `EC2:start'
+  * executing `EC2:setup'
+  * executing "sudo -p 'sudo password: ' mkdir -p /mnt/work"
+    servers: ["ec2-46-51-141-185.eu-west-1.compute.amazonaws.com"]
+    [ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] executing command
+    command finished
+  * executing "sudo -p 'sudo password: ' chown -R ubuntu /mnt/work"
+    servers: ["ec2-46-51-141-185.eu-west-1.compute.amazonaws.com"]
+    [ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] executing command
+    command finished
+  * executing "mkdir -p /mnt/work/scripts"
+    servers: ["ec2-46-51-141-185.eu-west-1.compute.amazonaws.com"]
+    [ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] executing command
+    command finished
+  * executing "cd /mnt/work/scripts && curl http://github.com/cassj/DNREST_expression_mouse_astrocyte_volta/raw/master/scripts/limma_xpn.R > limma_xpn.R"
+    servers: ["ec2-46-51-141-185.eu-west-1.compute.amazonaws.com"]
+    [ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] executing command
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] %
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] o
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] l
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] %
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] R
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] c
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] i
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] v
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] %
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] X
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] f
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] r
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] A
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] v
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] r
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] g
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] S
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] p
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] i
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] m
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] i
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] m
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] i
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] m
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] C
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] u
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] r
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] r
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] n
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] D
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] l
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] o
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] U
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] p
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] l
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] o
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] o
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] l
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] S
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] p
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] n
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] L
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] f
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] S
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] p
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] --:--:-- --:--:-- --:--:--     0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 1
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 1
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 2
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 2
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 1
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 1
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 2020    0     0   7052      0 --:--:-- --:--:-- --:--:-- 19056
+    command finished
+  * executing "cd /mnt/work/scripts && curl http://github.com/cassj/DNREST_expression_mouse_astrocyte_volta/raw/master/scripts/qw.R > qw.R"
+    servers: ["ec2-46-51-141-185.eu-west-1.compute.amazonaws.com"]
+    [ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] executing command
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] %
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] o
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] l
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] %
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] R
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] c
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] i
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] v
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] %
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] X
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] f
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] r
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] A
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] v
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] r
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] g
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] S
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] p
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] i
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] m
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] i
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] m
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] i
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] m
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] C
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] u
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] r
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] r
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] n
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] D
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] l
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] o
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] U
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] p
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] l
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] o
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] o
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] l
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] S
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] p
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] n
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] L
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] f
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] S
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] p
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0     0      0      0 --:--:-- --:--:-- --:--:--     0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 5
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 5
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 55    0     0    278      0 --:--:-- --:--:-- --:--:--   514
+    command finished
+  * executing "chmod +x /mnt/work/scripts/limma_xpn.R"
+    servers: ["ec2-46-51-141-185.eu-west-1.compute.amazonaws.com"]
+    [ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] executing command
+    command finished
+  * executing "cd /mnt/data && Rscript /mnt/work/scripts/limma_xpn.R raw/DNREST_expression_mouse_astrocyte_volta/Astro-REST-DN-raw.csv"
+    servers: ["ec2-46-51-141-185.eu-west-1.compute.amazonaws.com"]
+    [ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] executing command
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] Error in file(file, "rt") : cannot open the connection
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] Calls: read.csv -> read.table -> file
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] In addition:
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] Warning message:
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] In file(file, "rt") :
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] cannot open file 'raw/DNREST_expression_mouse_astrocyte_volta/Astro-REST-DN-raw.csv': No such file or directory
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] Execution halted
+    command finished
+failed: "sh -c 'cd /mnt/data && Rscript /mnt/work/scripts/limma_xpn.R raw/DNREST_expression_mouse_astrocyte_volta/Astro-REST-DN-raw.csv'" on ec2-46-51-141-185.eu-west-1.compute.amazonaws.com
+cat: SNAPID: No such file or directory
+  * executing `pp_expression_data'
+    triggering before callbacks for `pp_expression_data'
+  * executing `EC2:start'
+I, [2010-10-26T11:25:59.885309 #11841]  INFO -- : New RightAws::Ec2 using shared connections mode
+I, [2010-10-26T11:25:59.887570 #11841]  INFO -- : Opening new HTTPS connection to eu-west-1.ec2.amazonaws.com:443
+W, [2010-10-26T11:26:00.267165 #11841]  WARN -- : ##### RightAws::Ec2 returned an error: 400 Bad Request
+<?xml version="1.0" encoding="UTF-8"?>
+<Response><Errors><Error><Code>InvalidGroup.Duplicate</Code><Message>The security group 'CaTPAWS_DNREST_expression_mouse_astrocyte_volta' already exists</Message></Error></Errors><RequestID>72f418a7-6d0c-40d8-89a8-28308557d52d</RequestID></Response> #####
+W, [2010-10-26T11:26:00.267281 #11841]  WARN -- : ##### RightAws::Ec2 request: https://eu-west-1.ec2.amazonaws.com:443/?AWSAccessKeyId=16F5AHH5HWR243WSNMR2&Action=CreateSecurityGroup&GroupDescription=A%20group%20created%20by%20CaTPAWS%20%28http%3A%2F%2Fgithub.com%2Fcassj%2Fcatpaws%29&GroupName=CaTPAWS_DNREST_expression_mouse_astrocyte_volta&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2010-10-26T10%3A25%3A59.000Z&Version=2009-11-30&Signature=D3o2YHbYxR4JswSDnuAEKZJUmCqoShYNukPebkDqLD4%3D ####
+    triggering after callbacks for `EC2:start'
+  * executing `EC2:setup'
+  * executing "sudo -p 'sudo password: ' mkdir -p /mnt/work"
+    servers: ["ec2-46-51-141-185.eu-west-1.compute.amazonaws.com"]
+    [ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] executing command
+    command finished
+  * executing "sudo -p 'sudo password: ' chown -R ubuntu /mnt/work"
+    servers: ["ec2-46-51-141-185.eu-west-1.compute.amazonaws.com"]
+    [ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] executing command
+    command finished
+  * executing "mkdir -p /mnt/work/scripts"
+    servers: ["ec2-46-51-141-185.eu-west-1.compute.amazonaws.com"]
+    [ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] executing command
+    command finished
+  * executing "cd /mnt/work/scripts && curl http://github.com/cassj/DNREST_expression_mouse_astrocyte_volta/raw/master/scripts/limma_xpn.R > limma_xpn.R"
+    servers: ["ec2-46-51-141-185.eu-west-1.compute.amazonaws.com"]
+    [ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] executing command
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] %
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] o
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] l
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] %
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] R
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] c
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] i
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] v
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] %
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] X
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] f
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] r
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] A
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] v
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] r
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] g
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] S
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] p
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] i
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] m
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] i
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] m
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] i
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] m
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] C
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] u
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] r
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] r
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] n
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] D
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] l
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] o
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] U
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] p
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] l
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] o
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] o
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] l
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] S
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] p
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] n
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] L
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] f
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] S
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] p
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] -
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] -
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] :
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] -
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] -:-- --:--:-- --:--:--     0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 1
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 1
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 2
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 2
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 101  2020    0     0  10135      0 --:--:-- --:--:-- --:--:-- 19056
+    command finished
+  * executing "cd /mnt/work/scripts && curl http://github.com/cassj/DNREST_expression_mouse_astrocyte_volta/raw/master/scripts/qw.R > qw.R"
+    servers: ["ec2-46-51-141-185.eu-west-1.compute.amazonaws.com"]
+    [ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] executing command
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] %
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] o
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] l
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] %
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] R
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] c
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] i
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] v
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] %
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] X
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] f
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] r
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] A
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] v
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] r
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] g
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] S
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] p
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] i
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] m
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] i
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] m
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] i
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] m
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] C
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] u
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] r
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] r
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] n
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] D
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] l
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] o
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] U
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] p
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] l
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] o
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] o
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] l
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] S
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] p
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] n
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] L
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] f
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] S
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] p
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0      0      0 --:--:-- --:--:-- --:--:--     0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 5
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 5
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0    55    0     0    279      0 --:--:-- --:--:-- --:--:--   514
+    command finished
+  * executing "chmod +x /mnt/work/scripts/limma_xpn.R"
+    servers: ["ec2-46-51-141-185.eu-west-1.compute.amazonaws.com"]
+    [ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] executing command
+    command finished
+  * executing "cd /mnt/data && Rscript /mnt/work/scripts/limma_xpn.R raw/Astro-REST-DN-raw.csv"
+    servers: ["ec2-46-51-141-185.eu-west-1.compute.amazonaws.com"]
+    [ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] executing command
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] Loading required package: Biobase
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] Loading required package: methods
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] Welcome to Bioconductor
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] Vignettes contain introductory material. To view, type
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 'openVignette()'. To cite Bioconductor, see
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 'citation("Biobase")' and for packages 'citation(pkgname)'.
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] Attaching package: 'limma'
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] The following object(s) are masked from package:beadarray :
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] backgroundCorrect,
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] imageplot,
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] plotMA
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] Error in if (file == "") file <- stdout() else if (is.character(file)) { :
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] missing value where TRUE/FALSE needed
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] Calls: write.fit -> write.table
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] Execution halted
+    command finished
+failed: "sh -c 'cd /mnt/data && Rscript /mnt/work/scripts/limma_xpn.R raw/Astro-REST-DN-raw.csv'" on ec2-46-51-141-185.eu-west-1.compute.amazonaws.com
+cat: SNAPID: No such file or directory
+  * executing `pp_expression_data'
+    triggering before callbacks for `pp_expression_data'
+  * executing `EC2:start'
+I, [2010-10-26T11:27:06.723173 #11894]  INFO -- : New RightAws::Ec2 using shared connections mode
+I, [2010-10-26T11:27:06.725469 #11894]  INFO -- : Opening new HTTPS connection to eu-west-1.ec2.amazonaws.com:443
+W, [2010-10-26T11:27:06.854466 #11894]  WARN -- : ##### RightAws::Ec2 returned an error: 400 Bad Request
+<?xml version="1.0" encoding="UTF-8"?>
+<Response><Errors><Error><Code>InvalidGroup.Duplicate</Code><Message>The security group 'CaTPAWS_DNREST_expression_mouse_astrocyte_volta' already exists</Message></Error></Errors><RequestID>74ad0f25-0535-4e2f-998e-f4c3503e73b8</RequestID></Response> #####
+W, [2010-10-26T11:27:06.854550 #11894]  WARN -- : ##### RightAws::Ec2 request: https://eu-west-1.ec2.amazonaws.com:443/?AWSAccessKeyId=16F5AHH5HWR243WSNMR2&Action=CreateSecurityGroup&GroupDescription=A%20group%20created%20by%20CaTPAWS%20%28http%3A%2F%2Fgithub.com%2Fcassj%2Fcatpaws%29&GroupName=CaTPAWS_DNREST_expression_mouse_astrocyte_volta&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2010-10-26T10%3A27%3A06.000Z&Version=2009-11-30&Signature=lCNQAzY4b7zsMzQdfvT9gv3W%2F83rt4FcIYYUShuD08s%3D ####
+    triggering after callbacks for `EC2:start'
+  * executing `EC2:setup'
+  * executing "sudo -p 'sudo password: ' mkdir -p /mnt/work"
+    servers: ["ec2-46-51-141-185.eu-west-1.compute.amazonaws.com"]
+    [ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] executing command
+    command finished
+  * executing "sudo -p 'sudo password: ' chown -R ubuntu /mnt/work"
+    servers: ["ec2-46-51-141-185.eu-west-1.compute.amazonaws.com"]
+    [ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] executing command
+    command finished
+  * executing "mkdir -p /mnt/work/scripts"
+    servers: ["ec2-46-51-141-185.eu-west-1.compute.amazonaws.com"]
+    [ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] executing command
+    command finished
+  * executing "cd /mnt/work/scripts && curl http://github.com/cassj/DNREST_expression_mouse_astrocyte_volta/raw/master/scripts/limma_xpn.R > limma_xpn.R"
+    servers: ["ec2-46-51-141-185.eu-west-1.compute.amazonaws.com"]
+    [ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] executing command
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] %
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] o
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] l
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] %
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] R
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] c
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] i
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] v
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] %
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] X
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] f
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] r
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] A
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] v
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] r
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] g
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] S
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] p
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] i
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] m
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] i
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] m
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] i
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] m
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] C
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] u
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] r
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] r
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] n
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] D
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] l
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] o
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] U
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] p
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] l
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] o
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] o
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] l
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] S
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] p
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] n
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] L
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] f
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] S
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] p
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] --:--:-- --:--:-- --:--:--     0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 1
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 1
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 2
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 2
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 101  2020    0     0  10220      0 --:--:-- --:--:-- --:--:-- 18703
+    command finished
+  * executing "cd /mnt/work/scripts && curl http://github.com/cassj/DNREST_expression_mouse_astrocyte_volta/raw/master/scripts/qw.R > qw.R"
+    servers: ["ec2-46-51-141-185.eu-west-1.compute.amazonaws.com"]
+    [ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] executing command
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] %
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] o
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] l
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] %
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] R
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] c
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] i
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] v
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] %
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] X
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] f
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] r
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] A
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] v
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] r
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] g
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] S
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] p
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] i
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] m
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] i
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] m
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] i
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] m
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] C
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] u
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] r
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] r
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] n
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] D
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] l
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] o
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] U
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] p
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] l
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] o
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] T
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] o
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] a
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] l
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] S
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] p
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] n
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] L
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] f
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] t
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] S
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] p
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] e
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] d
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0     0      0      0 --:--:-- --:--:-- --:--:--     0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 5
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 5
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 0    55    0     0    276      0 --:--:-- --:--:-- --:--:--   509  0    55    0    55    0     0    275      0 --:--:-- --:--:-- --:--:--   509
+    command finished
+  * executing "chmod +x /mnt/work/scripts/limma_xpn.R"
+    servers: ["ec2-46-51-141-185.eu-west-1.compute.amazonaws.com"]
+    [ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] executing command
+    command finished
+  * executing "cd /mnt/data && Rscript /mnt/work/scripts/limma_xpn.R raw/Astro-REST-DN-raw.csv limma_results.csv"
+    servers: ["ec2-46-51-141-185.eu-west-1.compute.amazonaws.com"]
+    [ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] executing command
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] Loading required package: Biobase
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] Loading required package: methods
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] Welcome to Bioconductor
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] Vignettes contain introductory material. To view, type
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 'openVignette()'. To cite Bioconductor, see
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 'citation("Biobase")' and for packages 'citation(pkgname)'.
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] Attaching package: 'limma'
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] The following object(s) are masked from package:beadarray :
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] backgroundCorrect,
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] imageplot,
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] plotMA
+*** [err :: ec2-46-51-141-185.eu-west-1.compute.amazonaws.com] 
+    command finished
