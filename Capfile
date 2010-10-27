@@ -128,26 +128,43 @@ task "pp_qc_expression_data", :foles => group_name do
   #do some stuff
 end  
 
+#Don't need this anymore - the new ReMoat data maps to the right version of the genome 
+#desc "install liftover"
+#task :install_liftover, :roles => group_name do
+#  run "mkdir -p #{working_dir}/lib"
+#  run "curl 'http://hgdownload.cse.ucsc.edu/goldenPath/mm8/liftOver/mm8ToMm9.over.chain.gz' > #{working_dir}/lib/mm8ToMm9.over.chain.gz"
+#  run 'cd #{working_dir}/lib && gunzip -c mm8ToMm9.over.chain.gz > mm8ToMm9.over.chain'
+#  sudo 'wget -O /usr/bin/liftOver http://hgdownload.cse.ucsc.edu/admin/exe/linux.i386/liftOver'
+#  sudo 'chmod +x /usr/bin/liftOver'
+#end 
+#before "install_liftover", "EC2:start"
+
+#Don't need this anymore either
+#desc "Fetch Sentrix annotation from Illumina website"
+#task :get_sentrix_anno, :roles => group_name do
+#  run "mkdir -p #{working_dir}/lib"
+#  run "rm -Rf #{working_dir}/lib/Mouse-6_V1.csv*"
+#  run "curl http://www.switchtoi.com/pdf/Annotation%20Files/Mouse/Mouse-6_V1.csv.zip > #{working_dir}/lib/Mouse-6_V1.csv.zip"
+#  run "cd #{working_dir}/lib && unzip Mouse-6_V1.csv.zip"
+#end
+#before 'get_sentrix_anno','EC2:start'
+
+desc "Fetch ReMoat data which has mm9 probe positions"
+task :get_remoat_anno, :roles => group_name do
+  run "mkdir -p #{working_dir}/lib"
+  run "rm -Rf  #{working_dir}/lib/Annotation_Illumina_Mouse*"
+  run "cd #{working_dir}/lib && curl http://www.compbio.group.cam.ac.uk/Resources/Annotation/final/Annotation_Illumina_Mouse-WG-V1_mm9_V1.0.0_Aug09.zip > Annotation_Illumina_Mouse-WG-V1_mm9_V1.0.0_Aug09.zip "
+  run "cd #{working_dir}/lib && unzip Annotation_Illumina_Mouse-WG-V1_mm9_V1.0.0_Aug09.zip"
+end 
+before 'get_remoat_anno', 'EC2:start'
+
 
 desc "Make an IRanges object from expression data"
 task :irange_expression_data, :roles => group_name do
   user = variables[:ssh_options][:user]
-
-  run "mkdir -p #{working_dir}/lib"
-  run "curl 'http://hgdownload.cse.ucsc.edu/goldenPath/mm8/liftOver/mm8ToMm9.over.chain.gz' > #{working_dir}/lib/mm8ToMm9.over.chain.gz"
-  run 'cd #{working_dir}/lib && gunzip -c mm8ToMm9.over.chain.gz > mm8ToMm9.over.chain'
   run "curl 'http://github.com/cassj/manu_rest_project/raw/master/xpn_csv_to_iranges.R' >  xpn_csv_to_iranges.R"
 
-  #Illumina annotation data
-  run "curl http://www.switchtoi.com/pdf/Annotation%20Files/Mouse/Mouse-6_V1.csv.zip > #{working_dir}/lib/Mouse-6_V1.csv"
-
-  #reMOAT data, to get probe sequence and genome location (mm8, although they seem to have mm9
-  #now so perhaps we should update?
-  run "curl http://www.compbio.group.cam.ac.uk/Resources/Annotation/IlluminaMouseV1.txt > #{working_dir}/lib/IlluminaMouseV1.txt"
-  
-  sudo 'wget -O /usr/bin/liftOver http://hgdownload.cse.ucsc.edu/admin/exe/linux.i386/liftOver'
-  sudo 'chmod +x /usr/bin/liftOver'
-  #run "cd #{mount_point} && Rscript #{working_dir}/scripts/xpn_csv_to_iranges.R limma_results.csv #{working_dir}/lib/Mouse-6_V1.csv #{working_dir}/lib/IlluminaMouseV1.txt"
+  run "cd #{mount_point} && Rscript #{working_dir}/scripts/xpn_csv_to_iranges.R limma_results.csv #{working_dir}/lib/Mouse-6_V1.csv #{working_dir}/lib/IlluminaMouseV1.txt"
 end
 before "irange_expression_data","EC2:start"  
 
