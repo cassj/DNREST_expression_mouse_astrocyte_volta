@@ -159,14 +159,14 @@ end
 before 'get_remoat_anno', 'EC2:start'
 
 
-desc "Make an IRanges object from expression data"
-task :irange_expression_data, :roles => group_name do
+desc "Make an IRanges RangedData object from expression data"
+task :xpn2rd, :roles => group_name do
   user = variables[:ssh_options][:user]
-  run "curl 'http://github.com/cassj/manu_rest_project/raw/master/xpn_csv_to_iranges.R' >  xpn_csv_to_iranges.R"
-
-  run "cd #{mount_point} && Rscript #{working_dir}/scripts/xpn_csv_to_iranges.R limma_results.csv #{working_dir}/lib/Mouse-6_V1.csv #{working_dir}/lib/IlluminaMouseV1.txt"
+  run "cd #{working_dir}/scripts && curl 'http://github.com/cassj/DNREST_expression_mouse_astrocyte_volta/raw/master/scripts/xpn_csv_to_iranges.R' >  xpn_csv_to_iranges.R"
+  run "cd #{working_dir}/scripts && chmod +x xpn_csv_to_iranges.R"
+  run "cd #{mount_point} && Rscript #{working_dir}/scripts/xpn_csv_to_iranges.R limma_results.csv #{working_dir}/lib/Annotation_Illumina_Mouse-WG-V1_mm9_V1.0.0_Aug09.txt"
 end
-before "irange_expression_data","EC2:start"  
+before "xpn2rd","EC2:start"  
 
 
   

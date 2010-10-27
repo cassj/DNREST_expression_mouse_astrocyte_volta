@@ -209,9 +209,8 @@ rd.limma <- RangedData(ranges = IRanges(
 # save the results as RangedData and csv
 save(rd.limma, file="limma_rd.R")
 
-
 rownames(g.ranges) <- rownames(limma.annot) <- nms
-write.csv(cbind(g.ranges,limma.annot), file="limma_rd.csv")
+write.csv(cbind(g.ranges,limma.annot), file="limma_rd.csv", row.names=F)
 
 
 
