@@ -28,6 +28,13 @@ set :mount_point, '/mnt/data'
 
 set :git_url, 'http://github.com/cassj/DNREST_expression_mouse_astrocyte_volta/raw/master'
 
+# Try and load a local config file to override any of the above values, should one exist.
+# So that if you change these values, they don't get overwritten if you update the repos.
+begin
+ load("Capfile.local")
+rescue Exception
+end
+
 #cap EC2:start
 #cap EBS:create (unless you want to use the one that already exists)
 #cap EBS:attach
@@ -128,26 +135,6 @@ task "pp_qc_expression_data", :foles => group_name do
   #do some stuff
 end  
 
-#Don't need this anymore - the new ReMoat data maps to the right version of the genome 
-#desc "install liftover"
-#task :install_liftover, :roles => group_name do
-#  run "mkdir -p #{working_dir}/lib"
-#  run "curl 'http://hgdownload.cse.ucsc.edu/goldenPath/mm8/liftOver/mm8ToMm9.over.chain.gz' > #{working_dir}/lib/mm8ToMm9.over.chain.gz"
-#  run 'cd #{working_dir}/lib && gunzip -c mm8ToMm9.over.chain.gz > mm8ToMm9.over.chain'
-#  sudo 'wget -O /usr/bin/liftOver http://hgdownload.cse.ucsc.edu/admin/exe/linux.i386/liftOver'
-#  sudo 'chmod +x /usr/bin/liftOver'
-#end 
-#before "install_liftover", "EC2:start"
-
-#Don't need this anymore either
-#desc "Fetch Sentrix annotation from Illumina website"
-#task :get_sentrix_anno, :roles => group_name do
-#  run "mkdir -p #{working_dir}/lib"
-#  run "rm -Rf #{working_dir}/lib/Mouse-6_V1.csv*"
-#  run "curl http://www.switchtoi.com/pdf/Annotation%20Files/Mouse/Mouse-6_V1.csv.zip > #{working_dir}/lib/Mouse-6_V1.csv.zip"
-#  run "cd #{working_dir}/lib && unzip Mouse-6_V1.csv.zip"
-#end
-#before 'get_sentrix_anno','EC2:start'
 
 desc "Fetch ReMoat data which has mm9 probe positions"
 task :get_remoat_anno, :roles => group_name do
@@ -168,42 +155,15 @@ task :xpn2rd, :roles => group_name do
 end
 before "xpn2rd","EC2:start"  
 
-
-  
-
-desc "map irange position to nearest Ensembl gene"
-task :expression_to_ensembl, :roles => group_name do
-  
-  run 'wget "http://github.com/cassj/manu_rest_project/raw/master/mm9RDtoGenes.R" -O /mnt/scripts/mm9RDtoGenes.R'
-  run 'Rscript /mnt/scripts/mm9RDtoGenes.R filename=\\"/mnt/expression_data/RangedData_Limma.R\\"'
-end
-before "expression_to_ensembl", "EC2:start"  
-
-desc "make a csv file or the annotated ranged data"
-task :expression_to_csv,  :roles => group_name do
-  run 'wget "http://github.com/cassj/manu_rest_project/raw/master/annoRDtoCSV.R" -O /mnt/scripts/annoRDtoCSV.R'
-  run 'Rscript /mnt/scripts/annoRDtoCSV.R filename=\\"/mnt/expression_data/AnnoRangedData_Limma.R\\"'
-end
-before "expression_to_csv", 'EC2:start'
-
-  
-desc "fetch expression results"
-task :fetch_expression,  :roles => group_name do
-  sudo 'tar -cvzf /mnt/expression_data.tgz /mnt/expression_data'
-  download "/mnt/expression_data.tgz", "expression_data.tgz"
-  `tar -xvzf expression_data.tgz`
-  `rm expression_data.tgz`
-  `mv mnt results`
-end
-before "fetch_expression", "EC2:start"
-  
-  
-  
-desc "Run whole XDNvEV pre-processing"
-task :xdnvev,  :roles => group_name do
-  puts "Running, this may take a while..."
+desc "Fetch dataset in csv format"
+task :get_limma_results, :roles=> group_name do
+  `mkdir -p results`
+  download("#{mount_point}/limma_rd.csv", "results/limma_rd.csv")
 end 
-before "xdnvev", "EC2:start", "install_r", "get_expression_data", "pp_expression_data", "irange_expression_data", "expression_to_ensembl", "fetch_expression", "EC2:stop"
+before "get_limma_results", "EC2:start"
 
+#cap EBS:snapshot
+#cap EBS:unmount
+#cap EBS:delete
+#cap EC2:stop
 
-#end
